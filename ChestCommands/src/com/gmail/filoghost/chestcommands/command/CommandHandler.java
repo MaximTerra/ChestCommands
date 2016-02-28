@@ -24,8 +24,10 @@ public class CommandHandler extends CommandFramework {
 		if (args.length == 0) {
 			// This info is accessible to anyone. Please don't remove it, remember that Chest Commands is developed for FREE.
 			sender.sendMessage(ChestCommands.CHAT_PREFIX);
+			sender.sendMessage(ChatColor.GREEN + "You have a forked version of " + ChatColor.GRAY + "ChestCommands" + ChatColor.GREEN + "from Github");
 			sender.sendMessage(ChatColor.GREEN + "Version: " + ChatColor.GRAY + ChestCommands.getInstance().getDescription().getVersion());
 			sender.sendMessage(ChatColor.GREEN + "Developer: " + ChatColor.GRAY + "filoghost");
+			sender.sendMessage(ChatColor.GREEN + "Forked by: " + ChatColor.GRAY + "_DioPix723");
 			sender.sendMessage(ChatColor.GREEN + "Commands: " + ChatColor.GRAY + "/" + label + " help");
 			return;
 		}
@@ -65,7 +67,7 @@ public class CommandHandler extends CommandFramework {
 				new ErrorLoggerTask(errorLogger).run();
 				sender.sendMessage(ChestCommands.CHAT_PREFIX + ChatColor.RED + "Plugin reloaded with " + errorLogger.getSize() + " error(s).");
 				if (!(sender instanceof ConsoleCommandSender)) {
-					sender.sendMessage(ChestCommands.CHAT_PREFIX + ChatColor.RED + "Please check the console.");
+					sender.sendMessage(ChestCommands.CHAT_PREFIX + ChatColor.RED + "For more details, please check the console.");
 				}
 			}
 			return;
